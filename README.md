@@ -7,6 +7,6 @@
 
 ### Multi thread for Machine Learning
 - Conclusion: We have just seen that multithreading could help to reduce the time taken per epoch in model training. Note that this method will not help much if:
-  -there’s no more CPU resources left for another thread to be spawned
+  - there’s no more CPU resources left for another thread to be spawned
   - the original time taken is dominated by a process. If model training takes 10 seconds and data loading 0.1 second, then what normally consumes 101 seconds in total (for 10 epochs) will become 100 seconds. That’s equivalent to just about 1% improvement. In other words, the max of all processes’ time should ideally be way smaller than the their sum in order for multithreading to be effective.
 - (https://towardsdatascience.com/speeding-up-model-training-with-multithreading-462df558d4f4) ![image](https://user-images.githubusercontent.com/77564623/168698974-514c41a3-682d-44c1-b4f1-80113a009ec6.png)
